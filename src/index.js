@@ -83,7 +83,7 @@ app.post('/update', async (req, res) => {
   res.sendStatus(200)
 })
 
-app.get('/task/:id', async (req, res) => {
+app.all('/task/:id', async (req, res) => {
   console.log("getting task", req.params.id)
   const task = await getTask(req.params.id);
   console.log(task)
