@@ -11,7 +11,7 @@ var client = new twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
 function call(number, id){
   console.log('calling number', number, id);
-  const url = `${URL}/task/${id}`.replace('https://', '').replace(/\./g, ' dot ').replace(/\//g, ' slash ');
+  const url = `${URL}/${id}`.replace('https://', '').replace('-', ' dash ').replace(/\./g, ' dot ').replace(/\//g, ' slash ');
   console.log(url)
   if(DEBUG_MODE)
     return;
