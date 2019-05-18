@@ -7,7 +7,11 @@ const TWILIO_NUMBER = process.env.TWILIO_NUMBER || "";
 const DEBUG_MODE = process.env.DEBUG_MODE || true;
 
 console.log(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
-var client = new twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
+let client;
+console.log(DEBUG_MODE)
+if(!DEBUG_MODE || DEBUG_MODE === "false"){
+    client = new twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
+}
 
 function call(number, id){
   console.log('calling number', number, id);

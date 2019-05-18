@@ -2,6 +2,7 @@ import 'babel-polyfill';
 import express from 'express';
 import bodyParser from 'body-parser';
 import moment from 'moment';
+import path from 'path';
 import {
   getNumbersWithTask,
   getNumberWithTask,
@@ -11,9 +12,9 @@ import {
   saveNumber,
   getRandomTask,
   getTask,
-} from './db';
-import generateId from './generateId';
-import { call } from './twilio';
+} from './dist/db';
+import generateId from './dist/generateId';
+import { call } from './dist/twilio';
 
 const PORT = process.env.PORT || 3000;
 const ACCESS_KEY = process.env.ACCESS_KEY || "password";
@@ -24,7 +25,10 @@ const callPeriod = maxInterval-minInterval;
 
 const app = express();
 
+app.use(bodyParser.urlencoded());
 app.use(bodyParser.text({type:'*/*'}));
+app.use(express.static('static'))
+const root = path.join(__dirname);
 
 app.post('/update', async (req, res) => {
   console.log(req.body, ACCESS_KEY)
@@ -99,6 +103,17 @@ app.post('/complete/:id', async (req, res) => {
     deleteTask(task);
   }
   res.sendStatus(200)
+})
+
+app.get('*', (req, res) => {
+  res.sendFile('./static/addiktio-landing.html', {root})
+})
+app.post('*', (req, res) => {
+  console.log(req.body)
+  saveNumber({
+    number: req.body.number,
+  })
+  res.sendFile('./static/addiktio-landing.html', {root})
 })
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}!`))

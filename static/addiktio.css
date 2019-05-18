@@ -1,0 +1,224 @@
+@font-face {
+  font-family: 'tHe BeSt foNT';
+  src: url('px_sans_nouveaux.ttf');
+}
+
+
+body {
+  background-image: url("http://server6.wikisky.org/imgcut?survey=DSS2&img_id=all&angle=0.3125&ra=1.33333333333333&de=40&x_shift=-5760&y_shift=2176");
+  font-family:"tHe BeSt foNT", "px sans nouveaux";
+  font-size: 16px;
+}
+
+.vittujee {
+  margin-top: 5vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: transparent;
+}
+/* CLOUDS */
+vittujee:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  margin: auto;
+  border-radius: 100%;
+  background: transparent;
+  display: block;
+  box-shadow: 0 0 150px 100px rgba(255, 255, 255, 0.6),
+    200px 0 200px 150px rgba(255, 255, 255, 0.6),
+    -250px 0 300px 150px rgba(255, 255, 255, 0.6),
+    550px 0 300px 200px rgba(255, 255, 255, 0.6),
+    -550px 0 300px 200px rgba(255, 255, 255, 0.6);
+}
+/* JUMP */
+h1 {
+  cursor: default;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+h1 span {
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  -webkit-animation: bounce 0.3s ease infinite alternate;
+  font-size: 2em;
+  color: #fff;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+h1 span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+}
+
+h1 span:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+}
+
+h1 span:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+}
+
+h1 span:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+}
+
+h1 span:nth-child(6) {
+  -webkit-animation-delay: 0.5s;
+}
+
+h1 span:nth-child(7) {
+  -webkit-animation-delay: 0.6s;
+}
+
+h1 span:nth-child(8) {
+  -webkit-animation-delay: 0.2s;
+}
+
+h1 span:nth-child(9) {
+  -webkit-animation-delay: 0.3s;
+}
+
+h1 span:nth-child(10) {
+  -webkit-animation-delay: 0.4s;
+}
+
+h1 span:nth-child(11) {
+  -webkit-animation-delay: 0.5s;
+}
+
+h1 span:nth-child(12) {
+  -webkit-animation-delay: 0.6s;
+}
+
+h1 span:nth-child(13) {
+  -webkit-animation-delay: 0.7s;
+}
+
+h1 span:nth-child(14) {
+  -webkit-animation-delay: 0.8s;
+}
+
+@-webkit-keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+      0 50px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+#logo {
+  width: 60vw;
+  height: auto;
+  border: 0;
+  display: block;
+  margin: auto;
+  padding-top: 5vh;
+}
+
+#welcome {
+  width: 80vw;
+  height: auto;
+  background-color: #C0C0C0;
+  display: block;
+  margin: auto;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+
+#welcome > p {
+  padding: 2em;
+  font-size: 2em;
+  color: black;
+}
+
+button {
+  font-size: 2.5em;
+  outline: 1px solid #000000;
+  background: #C0C0C0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FFFFFF #808080 #808080 #FFFFFF;
+  padding: 7px 15px;
+  margin: 20px auto 5vh;
+  font-family: "tHe BeSt foNT";
+  display: block;
+  position: relative;
+  bottom: 0px;
+}
+
+h2.title {
+  background-color: #9e2bf9;
+  color: white;
+  font-size: 2em;
+  padding: .5em;
+}
+
+.blinking {
+    animation:blinkingText 1s infinite;
+}
+  @keyframes blinkingText{
+      0%{     color: white;    }
+      49%{    color: transparent; }
+      50%{    color: transparent; }
+      99%{    color:transparent;  }
+      100%{   color: white;    }
+  }
+
+#options {
+  background-image: url("giphy.gif");
+}
+
+#blinGblinGbiTCHES {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#blinGblinGbiTCHES > img {
+  height: 4vh;
+  padding: 0 1vw;
+}
+
+#options > div {
+    display: inline-block;
+    width: 40vw;
+    height: auto;
+    background-color: #C0C0C0;
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+}
+
+#personal {
+  margin-left: 6vw;
+  margin-right: 5vw;
+}
