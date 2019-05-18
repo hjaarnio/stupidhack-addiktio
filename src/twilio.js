@@ -12,7 +12,7 @@ var client = new twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 function call(number, id){
   console.log('calling number', number, id);
   console.log(`${URL}/task/${id}`, DEBUG_MODE)
-  if(DEBUG_MODE !== false || DEBUG_MODE !== "false")
+  if(DEBUG_MODE !== false && DEBUG_MODE !== "false")
     return;
   console.log("calling for real")
   client.calls
