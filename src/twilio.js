@@ -11,13 +11,13 @@ var client = new twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
 function call(number, id){
   console.log('calling number', number, id);
-  const url = URL.replace('.', ' dot ').replace('/', ' slash ');
+  const url = `${URL}/task/${id}`.replace('https://', '').replace(/\./g, ' dot ').replace(/\//g, ' slash ');
   console.log(url)
   if(DEBUG_MODE)
     return;
   client.calls
     .create({
-      url: `${URL}/task/${id}`,
+      url: url,
       to: number,  // Call this number
       from: TWILIO_NUMBER // From a valid Twilio number
     })
