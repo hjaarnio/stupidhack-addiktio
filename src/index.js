@@ -36,7 +36,7 @@ app.post('/update', async (req, res) => {
     res.sendStatus(400);
     return;
   }
-  if(req.body !== ACCESS_KEY){
+  if(req.body.password !== ACCESS_KEY){
     res.sendStatus(403);
     return;
   }
