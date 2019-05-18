@@ -12,7 +12,7 @@ function call(number, id){
   client.calls
     .create({
       url: `${URL}/task/${id}`,
-      to: number.number,  // Call this number
+      to: number,  // Call this number
       from: TWILIO_NUMBER // From a valid Twilio number
     })
     .then(call => process.stdout.write(call.sid))
