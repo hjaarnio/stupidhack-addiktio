@@ -3,7 +3,6 @@
   src: url('px_sans_nouveaux.ttf');
 }
 
-
 body {
   background-image: url("http://server6.wikisky.org/imgcut?survey=DSS2&img_id=all&angle=0.3125&ra=1.33333333333333&de=40&x_shift=-5760&y_shift=2176");
   font-family:"tHe BeSt foNT", "px sans nouveaux";
@@ -26,10 +25,8 @@ body {
 ::selection {
   background: transparent;
 }
-/* CLOUDS */
 vittujee:before {
   content: "";
-  /* position: absolute; */
   top: 0;
   left: 0;
   right: 0;
@@ -45,10 +42,9 @@ vittujee:before {
     550px 0 300px 200px rgba(255, 255, 255, 0.6),
     -550px 0 300px 200px rgba(255, 255, 255, 0.6);
 }
-/* JUMP */
+
 h1 {
   cursor: default;
-  /* position: absolute; */
   top: 0;
   left: 0;
   right: 0;
@@ -160,7 +156,7 @@ h1 span:nth-child(14) {
 }
 
 button {
-  font-size: 2.5em;
+  font-size: 1.5em;
   outline: 1px solid #000000;
   background: #C0C0C0;
   border-width: 1px;
@@ -215,10 +211,26 @@ h2.title {
     background-color: #C0C0C0;
     padding: 10px;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
+}
+
+input {
+  width: 30vw;
+  height: 3vh;
 }
 
 #personal {
-  margin-left: 6vw;
+  margin-left: 4vw;
   margin-right: 5vw;
+}
+
+#feetses {
+  font-size: 2em;
+  color: black;
+  position: absolute;
+  margin-left: 12vw;
+}
+
+#feetses > p {
+    margin-top: -60px;
 }
