@@ -50,7 +50,7 @@ app.post('/update', async (req, res) => {
       console.log("having task template", taskTemplate)
       const id = generateId();
       const url = `${taskTemplate.baseUrl}/${id}`.replace('https://', '').replace('-', ' dash ').replace(/\./g, ' dot ').replace(/\//g, ' slash ');
-      const xml = `<Response><Say voice="alice">You have a task to complete at u r l ${url}</Say></Response>`;
+      const xml = `<Response><Say voice="alice">Hello from addict dot i o. You have a task to complete at u r l ${url}</Say></Response>`;
       const task = {
         id: id,
         xml: xml,
